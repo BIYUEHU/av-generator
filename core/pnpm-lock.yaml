@@ -1,0 +1,110 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@remotion/captions':
+        specifier: 4.0.300
+        version: 4.0.300
+      '@remotion/media-parser':
+        specifier: 4.0.298
+        version: 4.0.298
+      '@remotion/media-utils':
+        specifier: 4.0.298
+        version: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@remotion/zod-types':
+        specifier: 4.0.298
+        version: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.22.3)
+      react:
+        specifier: 19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: 19.0.0
+        version: 19.0.0(react@19.0.0)
+      remotion:
+        specifier: 4.0.298
+        version: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      zod:
+        specifier: 3.22.3
+        version: 3.22.3
+
+packages:
+
+  '@remotion/captions@4.0.300':
+    resolution: {integrity: sha512-MkR5ePsTc/IVQWXUzQ4AMnZYSVa53O60T6KV92Cjde0DPUyn7L24kjHxYKCphRDitJcHjZCEFBtrnKqYtCMMxg==}
+
+  '@remotion/media-parser@4.0.298':
+    resolution: {integrity: sha512-SPPuPkb9ViAU/YntcJeAWRTPWQRaRGxquUlNkqUj3ggjv3reTw9OufQoYf1xuSQUla+JVPhiFvsBqwlmugPPiw==}
+
+  '@remotion/media-utils@4.0.298':
+    resolution: {integrity: sha512-Jggc/Y2jOThPYneHEB+0SjzalbWwzI7AASBnSwu3lP8m7y5BBSGkb2+MpQ2bZM932y4+Tw4PAvjG8oBtH8Mk5Q==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  '@remotion/zod-types@4.0.298':
+    resolution: {integrity: sha512-BVsUDDH0QPod5rDLqHcR2OAUQ/t9vUYLBH/JgUKjU5xANyuftABRHc/erB+NUQEt0YYe3XVvtKEp0QoFVTyITQ==}
+    peerDependencies:
+      zod: 3.22.3
+
+  react-dom@19.0.0:
+    resolution: {integrity: sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==}
+    peerDependencies:
+      react: ^19.0.0
+
+  react@19.0.0:
+    resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
+    engines: {node: '>=0.10.0'}
+
+  remotion@4.0.298:
+    resolution: {integrity: sha512-COuhJRkv97yTrw6VBFZ4Bi0mTCVrSN7AAg6IQvZTM2r4Wzt0ba894LNGhOh8thPy04FjwIBx45qYzYb3W5otAA==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  scheduler@0.25.0:
+    resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
+
+  zod@3.22.3:
+    resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
+
+snapshots:
+
+  '@remotion/captions@4.0.300': {}
+
+  '@remotion/media-parser@4.0.298': {}
+
+  '@remotion/media-utils@4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+      remotion: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+
+  '@remotion/zod-types@4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.22.3)':
+    dependencies:
+      remotion: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      zod: 3.22.3
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  react-dom@19.0.0(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      scheduler: 0.25.0
+
+  react@19.0.0: {}
+
+  remotion@4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
+  scheduler@0.25.0: {}
+
+  zod@3.22.3: {}

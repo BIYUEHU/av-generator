@@ -1,0 +1,25 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    filter: brightness(0.8);
+  }
+
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+.visualizer-bar {
+  transition: height 0.1s ease-out;
+}
+
+.lyrics-container {
+  transition: opacity 0.3s ease-in-out;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "av-generator",
+  "version": "1.0.0",
+  "description": "Audio-Visual Generator",
+  "author": "Arimua Sena <biyuehuya@ymail.com>",
+  "repository": {},
+  "license": "BAN-ZHINESE-USING",
+  "private": true,
+  "dependencies": {
+    "@remotion/captions": "4.0.300",
+    "@remotion/media-parser": "4.0.298",
+    "@remotion/media-utils": "4.0.298",
+    "@remotion/zod-types": "4.0.298",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.298",
+    "zod": "3.22.3"
+  }
+}

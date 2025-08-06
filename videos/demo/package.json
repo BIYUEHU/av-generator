@@ -1,0 +1,26 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "demo",
+  "author": "Arimua Sena <biyuehuya@ymail.com>",
+  "license": "BAN-ZHINESE-USING",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.298",
+    "@remotion/captions": "4.0.300",
+    "@remotion/media-parser": "4.0.298",
+    "@remotion/media-utils": "4.0.298",
+    "@remotion/zod-types": "4.0.298",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.298",
+    "zod": "3.22.3",
+    "av-generator": "workspace:^"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render",
+    "upgrade": "remotion upgrade"
+  }
+}
