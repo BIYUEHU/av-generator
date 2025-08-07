@@ -4,14 +4,9 @@ import { SongInfoConfig } from '../../types/config'
 export const SongInfo: React.FC<{
   config: SongInfoConfig
 }> = ({ config }) => {
-  const style: Partial<SongInfoConfig['style']> = config.style || {}
-
   return (
     <div
       style={{
-        position: 'absolute',
-        right: '32px',
-        [style.position || 'bottom']: '80px',
         display: 'flex',
         alignItems: 'center',
         gap: '40px',

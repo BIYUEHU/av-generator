@@ -5,6 +5,10 @@ export const StaticBackground: React.FC<{
   style?: React.CSSProperties
 }> = ({ src, style }) => (
   <AbsoluteFill>
-    <Img src={src} style={{ width: '100%', height: '100%', ...style }} />
+    {src ? (
+      <Img src={src} style={{ width: '100%', height: '100%', ...style }} />
+    ) : (
+      <div style={{ width: '100%', height: '100%', ...style }} />
+    )}
   </AbsoluteFill>
 )

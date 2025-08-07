@@ -9,7 +9,7 @@ export const Lyrics: React.FC<{
   const { fps } = useVideoConfig()
   const currentMs = (frame / fps) * 1000
 
-  const captions = config?.src ? parseSrt({ input: config.src }).captions : null
+  const captions = config?.content ? parseSrt({ input: config.content }).captions : null
 
   const currentIndex = captions?.findIndex((caption) => currentMs >= caption.startMs && currentMs <= caption.endMs)
 
@@ -18,30 +18,12 @@ export const Lyrics: React.FC<{
   return (
     <div
       style={{
-        position: 'absolute',
-        left: '1%',
-        top: '1%',
-        transform: 'translateX(0%)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'start',
-        gap: '8px',
+        fontSize: '40px',
+        color: '#dddddd',
         ...config.style
       }}
     >
-      {captions && (
-        <div
-          style={{
-            padding: '6px 12px',
-            borderRadius: '4px',
-            fontSize: '40px',
-            color: '#dddddd',
-            ...config.style
-          }}
-        >
-          {captions[currentIndex].text}
-        </div>
-      )}
+      {captions?.[currentIndex].text}
     </div>
   )
 }

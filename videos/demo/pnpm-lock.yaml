@@ -24,7 +24,7 @@ importers:
         specifier: 4.0.298
         version: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.22.3)
       av-generator:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../core
       react:
         specifier: 19.0.0

@@ -1,19 +1,22 @@
 {
   "name": "av-generator",
   "version": "1.0.0",
-  "description": "Audio-Visual Generator",
+  "description": "Audio-Visualizer Generator",
   "author": "Arimua Sena <biyuehuya@ymail.com>",
   "repository": {},
   "license": "BAN-ZHINESE-USING",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "pnpx nodemon --ext .ts,.tsx --watch src --exec tsc --build",
+    "build": "tsc"
+  },
   "private": true,
   "dependencies": {
     "@remotion/captions": "4.0.300",
     "@remotion/media-parser": "4.0.298",
     "@remotion/media-utils": "4.0.298",
-    "@remotion/zod-types": "4.0.298",
     "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "remotion": "4.0.298",
-    "zod": "3.22.3"
+    "remotion": "4.0.298"
   }
 }

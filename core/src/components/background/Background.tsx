@@ -6,7 +6,7 @@ import { VideoBackground } from './VideoBackground'
 
 export const Background: React.FC<{ config: BackgroundConfig }> = ({ config }) => {
   switch (config.type) {
-    case 'staticImage':
+    case 'static':
       return <StaticBackground src={config.src} style={config.style} />
     case 'video':
       return <VideoBackground src={config.src} style={config.style} />

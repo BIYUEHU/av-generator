@@ -4,6 +4,8 @@
   "description": "Audio-Visualizer Generator",
   "author": "Arimua Sena <biyuehuya@ymail.com>",
   "scripts": {
+    "dev": "pnpm --filter av-generator dev",
+    "d": "pnpm --filter demo",
     "lint": "biome check src --write"
   },
   "repository": {},

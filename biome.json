@@ -13,7 +13,14 @@
     "enabled": true,
     "rules": {
       "style": {
-        "useImportType": "off"
+        "useImportType": "off",
+        "noNonNullAssertion": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
       }
     }
   },

@@ -1,14 +1,5 @@
 {
   "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist"
-  },
-  "references": [
-    {
-      "path": "../../core"
-    }
-  ],
   "exclude": [
     "remotion.config.ts"
   ]

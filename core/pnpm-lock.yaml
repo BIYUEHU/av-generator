@@ -17,21 +17,12 @@ importers:
       '@remotion/media-utils':
         specifier: 4.0.298
         version: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@remotion/zod-types':
-        specifier: 4.0.298
-        version: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.22.3)
       react:
         specifier: 19.0.0
         version: 19.0.0
-      react-dom:
-        specifier: 19.0.0
-        version: 19.0.0(react@19.0.0)
       remotion:
         specifier: 4.0.298
         version: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      zod:
-        specifier: 3.22.3
-        version: 3.22.3
 
 packages:
 
@@ -46,11 +37,6 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
-
-  '@remotion/zod-types@4.0.298':
-    resolution: {integrity: sha512-BVsUDDH0QPod5rDLqHcR2OAUQ/t9vUYLBH/JgUKjU5xANyuftABRHc/erB+NUQEt0YYe3XVvtKEp0QoFVTyITQ==}
-    peerDependencies:
-      zod: 3.22.3
 
   react-dom@19.0.0:
     resolution: {integrity: sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==}
@@ -70,9 +56,6 @@ packages:
   scheduler@0.25.0:
     resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
 
-  zod@3.22.3:
-    resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
-
 snapshots:
 
   '@remotion/captions@4.0.300': {}
@@ -84,14 +67,6 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       remotion: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-
-  '@remotion/zod-types@4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(zod@3.22.3)':
-    dependencies:
-      remotion: 4.0.298(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      zod: 3.22.3
-    transitivePeerDependencies:
-      - react
-      - react-dom
 
   react-dom@19.0.0(react@19.0.0):
     dependencies:
@@ -106,5 +81,3 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
 
   scheduler@0.25.0: {}
-
-  zod@3.22.3: {}

@@ -1,19 +1,19 @@
 import { useAudioData, visualizeAudio } from '@remotion/media-utils'
 import { useCurrentFrame, useVideoConfig } from 'remotion'
-import { AudioVisualizerSpectrumConfig } from '../../types/config'
-import { processFrequencyData } from '../../utils/processFrequencyData'
+import { SimpleSpectrumVisualizerConfig } from '../../types/config'
+import { processFrequencyData } from '../../utils/common'
 
 const getBarGradient = (colors: string[]) => {
   return `linear-gradient(to top, ${colors.join(', ')})`
 }
 
-export const Spectrum: React.FC<{
-  config: AudioVisualizerSpectrumConfig
-  audioSrc: string
-}> = ({ config, audioSrc }) => {
+export const SimpleSpectrumVisualizer: React.FC<{
+  config: SimpleSpectrumVisualizerConfig
+  audio: string
+}> = ({ config, audio }) => {
   const frame = useCurrentFrame()
   const { fps } = useVideoConfig()
-  const audioData = useAudioData(audioSrc)
+  const audioData = useAudioData(audio)
 
   if (!audioData) return null
 
