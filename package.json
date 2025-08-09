@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "pnpm --filter av-generator dev",
     "d": "pnpm --filter demo",
-    "lint": "biome check src --write"
+    "lint": "biome check src --write",
+    "new": "python scripts/new.py"
   },
   "repository": {},
   "license": "BAN-ZHINESE-USING",
