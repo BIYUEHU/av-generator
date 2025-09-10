@@ -9,3 +9,6 @@ build
 **/*/public
 
 tsconfig.tsbuildinfo
+
+*.res.js
+*.res.mjs

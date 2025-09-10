@@ -1,5 +1,14 @@
+type props2 = {x: string}
+
+module X = {
+  @react.component
+  let com = (~p: props2) => {
+    <div> {React.string(p.x)} </div>
+  }
+}
+
 @react.component
-let make = () => {
+let make: unit => Jsx.element = () => {
   let (count, setCount) = React.useState(() => 0)
 
   <div className="max-w-200">
@@ -23,5 +32,3 @@ let make = () => {
     </p>
   </div>
 }
-
-let x = Config.Color("")
