@@ -1,10 +1,10 @@
-import { Composition, registerRoot } from 'remotion'
+import { Composition } from 'remotion'
 import { Template } from '../types/common'
 import { VideoConfig } from '../types/config'
 import { calculateDurationInFrames } from './common'
 
-export function bootstrap(template: Template, config: VideoConfig): void {
-  registerRoot(() => (
+export function setup(template: Template, config: VideoConfig) {
+  return (
     <Composition
       id={config.render?.title ?? 'MusicVideo'}
       component={template}
@@ -16,5 +16,5 @@ export function bootstrap(template: Template, config: VideoConfig): void {
         fps: config.render?.fps ?? 30
       })}
     />
-  ))
+  )
 }
