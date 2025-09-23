@@ -1,1 +1,4 @@
 videos/*            linguist-detectable=false
+videos/demo/**/*.ts            linguist-detectable=true
+core/**/*.ts            linguist-detectable=false
+core/**/*.tsx            linguist-detectable=false
