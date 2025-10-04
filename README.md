@@ -2,4 +2,5 @@
 
 ## TODO
 
-- `.lrc` automatically transform into `.srt`
+- Using `UnoCSS`
+- ~~`.lrc` automatically transform into `.srt`~~

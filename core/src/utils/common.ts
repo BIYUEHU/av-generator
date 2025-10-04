@@ -21,26 +21,6 @@ export async function calculateDurationInFrames(src: string) {
   return Math.floor(slowDurationInSeconds * 30)
 }
 
-export function lrcToSrt(lrcContent: string) {
-  const lines = lrcContent.split('\n')
-  let srtContent = ''
-  let index = 1
-
-  for (const line of lines) {
-    const match = line.match(/\[(\d{2}):(\d{2})\.(\d{2})\](.*)/)
-    if (match) {
-      const [, minutes, seconds, centiseconds, text] = match
-      const startTime = `00:${minutes}:${seconds},${centiseconds}0`
-      const endTime = `00:${minutes}:${(parseInt(seconds) + 5).toString().padStart(2, '0')},${centiseconds}0`
-
-      srtContent += `${index}\n${startTime} --> ${endTime}\n${text.trim()}\n\n`
-      index++
-    }
-  }
-
-  return srtContent
-}
-
 export function getLyrics(sources: string[]) {
   return Promise.all(sources.map((str) => fetch(staticFile(str)).then((res) => res.text())))
 }
@@ -81,4 +61,48 @@ export function processFrequencyData(
 
   const invMaxValue = 1 / maxValue
   return frequencies.map((f) => (f * invMaxValue) ** 0.9)
+}
+
+export function lrc2srt(lrc: string): string {
+  function pad(n: number, width = 2) {
+    return n.toString().padStart(width, '0')
+  }
+
+  function formatTime(ms: number): string {
+    const h = Math.floor(ms / 3600000)
+    const m = Math.floor((ms % 3600000) / 60000)
+    const s = Math.floor((ms % 60000) / 1000)
+    const msPart = ms % 1000
+    return `${pad(h)}:${pad(m)}:${pad(s)},${pad(msPart, 3)}`
+  }
+
+  const lines = lrc.split(/\r?\n/)
+  const entries: { start: number; end: number; text: string }[] = []
+
+  for (const line of lines) {
+    const match = line.match(/\[(\d+):(\d+)(?:\.(\d+))?\](.*)/)
+    if (match) {
+      const min = parseInt(match[1], 10)
+      const sec = parseInt(match[2], 10)
+      const ms = match[3] ? parseInt(match[3].padEnd(3, '0'), 10) : 0
+      const text = match[4].trim()
+      entries.push({
+        start: min * 60 * 1000 + sec * 1000 + ms,
+        end: 0,
+        text
+      })
+    }
+  }
+
+  entries.sort((a, b) => a.start - b.start)
+
+  for (let i = 0; i < entries.length; i++) {
+    entries[i].end = i < entries.length - 1 ? entries[i + 1].start - 1 : entries[i].start + 2000
+  }
+
+  return entries.map((e, i) => `${i + 1}\n${formatTime(e.start)} --> ${formatTime(e.end)}\n${e.text}\n`).join('\n')
+}
+
+export function transform<T>(c: T, transformFn: (c: T) => T) {
+  return transformFn(c)
 }
