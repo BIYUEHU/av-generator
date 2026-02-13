@@ -4,7 +4,7 @@
   "description": "Audio-Visualizer Generator",
   "author": "Arimua Sena <biyuehuya@ymail.com>",
   "repository": {},
-  "license": "BAN-ZHINESE-USING",
+  "license": "GPL-3.0-or-later",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

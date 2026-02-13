@@ -10,7 +10,7 @@
     "new": "python scripts/new.py"
   },
   "repository": {},
-  "license": "BAN-ZHINESE-USING",
+  "license": "GPL-3.0-or-later",
   "private": true,
   "devDependencies": {
     "@biomejs/biome": "2.1.3",

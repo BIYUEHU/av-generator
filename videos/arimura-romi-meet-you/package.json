@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "arimura-romi-meet-you",
   "author": "Arimua Sena <biyuehuya@ymail.com>",
-  "license": "BAN-ZHINESE-USING",
+  "license": "GPL-3.0-or-later",
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.298",
